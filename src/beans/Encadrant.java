@@ -9,20 +9,20 @@ package beans;
  *
  * @author AMINE
  */
-public class Etudiant {
+public class Encadrant {
     private int id;
     private String nom;
     private String prenom;
     private String email;
 
-    public Etudiant(int id, String nom, String prenom, String email) {
+    public Encadrant(int id, String nom, String prenom, String email) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
     }
 
-    public Etudiant(String nom, String prenom, String email) {
+    public Encadrant(String nom, String prenom, String email) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
@@ -62,8 +62,9 @@ public class Etudiant {
 
     @Override
     public String toString() {
-        return "Etudiant{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + '}';
+        return "Encadrant{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + '}';
     }
+    
     
     
     

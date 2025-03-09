@@ -72,6 +72,11 @@ public class Stage {
     public void setDate_fin(Date date_fin) {
         this.date_fin = date_fin;
     }
+
+    @Override
+    public String toString() {
+        return "Stage{" + "id=" + id + ", entreprise=" + entreprise + ", sujet=" + sujet + ", date_debut=" + date_debut + ", date_fin=" + date_fin + '}';
+    }
     
     
             
