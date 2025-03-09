@@ -32,7 +32,7 @@ public class Test {
         //ens.create(new Encadrant("Berrada", "Karim", "karim@gmail.com"));
         
         
-        //ase.create(new AffectationStage(sv.findById(1), es.findById(1), ens.findById(1)));
+        ase.create(new AffectationStage(sv.findById(1), es.findById(1), ens.findById(1)));
         
         for(Stage s : sv.findAll()){
             System.out.println(s);

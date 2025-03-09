@@ -42,6 +42,7 @@ public class AffectationStageService implements IDao<AffectationStage>{
             ps.setInt(1, o.getStage().getId());
             ps.setInt(2, o.getEtudiant().getId());
             ps.setInt(3, o.getEncadrant().getId());
+            ps.executeUpdate();
             return true;
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
