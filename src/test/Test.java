@@ -27,12 +27,38 @@ public class Test {
         EncadrantService ens = new EncadrantService();
         AffectationStageService ase = new AffectationStageService();
         
+        //Création : 
+        
         //sv.create(new Stage("meta", "angular", new Date(), new Date()));
         //es.create(new Etudiant("Ahmadi", "Hassan", "hassan@gmail.com"));
         //ens.create(new Encadrant("Berrada", "Karim", "karim@gmail.com"));
+        //ase.create(new AffectationStage(sv.findById(1), es.findById(1), ens.findById(1)));
         
+        //Modification
+//        Stage stage = sv.findById(1);
+//        stage.setEntreprise("webhelp");
+//        sv.update(stage);
         
-        ase.create(new AffectationStage(sv.findById(1), es.findById(1), ens.findById(1)));
+//        Etudiant etudiant = es.findById(2);
+//        etudiant.setEmail("bonj@gmail.com");
+//        es.update(etudiant);
+        
+//        Encadrant encadrant = ens.findById(2);
+//        encadrant.setPrenom("Ali");
+//        ens.update(encadrant);
+        
+        //Suppression
+//        Encadrant encadrant = ens.findById(2);
+//        ens.delete(encadrant);
+          
+//        Etudiant etudiant = es.findById(2);
+//        es.delete(etudiant);
+        
+//       Stage stage = sv.findById(1);
+//       sv.delete(stage);
+        
+//        AffectationStage affectationstage= ase.findAll().get(0);
+//        ase.delete(affectationstage);
         
         for(Stage s : sv.findAll()){
             System.out.println(s);

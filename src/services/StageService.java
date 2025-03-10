@@ -70,6 +70,7 @@ public class StageService implements IDao<Stage> {
             ps.setString(2, o.getSujet());
             ps.setDate(3, new Date(o.getDate_debut().getTime()));
             ps.setDate(4, new Date(o.getDate_fin().getTime()));
+            ps.setInt(5, o.getId());
             ps.executeUpdate();
             return true;
             
