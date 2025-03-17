@@ -24,6 +24,13 @@ CREATE TABLE Etudiant(
     );
 
 CREATE TABLE Encadrant(
+id int PRIMARY KEY AUTO_INCREMENT,
+    nom varchar(50),
+    prenom varchar(50),
+    email varchar(50)
+    );
+
+INSERT INTO `user` (`login`, `password`) VALUES ('amine', SHA1('123'));
     id int PRIMARY KEY AUTO_INCREMENT,
     nom varchar(50),
     prenom varchar(50),
