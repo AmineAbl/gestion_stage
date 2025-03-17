@@ -6,6 +6,7 @@
 package services;
 
 import beans.Etudiant;
+import beans.Stage;
 import connexion.Connexion;
 import dao.IDao;
 import java.sql.Date;
@@ -95,6 +96,21 @@ public class EtudiantService implements IDao<Etudiant> {
         String req = "select * from Etudiant"; 
         try {
             PreparedStatement ps = connexion.getCn().prepareStatement(req);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next())
+                etudiants.add(new Etudiant(rs.getInt("id"), rs.getString("nom"), rs.getString("prenom"), rs.getString("email")));
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return etudiants;
+    }
+    
+    public List<Etudiant> findByStage(Stage s) {
+        List<Etudiant>  etudiants = new ArrayList<>();
+        String req = "select * from Etudiant where stage = ? "; 
+        try {
+            PreparedStatement ps = connexion.getCn().prepareStatement(req);
+            ps.setInt(1, s.getId());
             ResultSet rs = ps.executeQuery();
             while (rs.next())
                 etudiants.add(new Etudiant(rs.getInt("id"), rs.getString("nom"), rs.getString("prenom"), rs.getString("email")));

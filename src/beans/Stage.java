@@ -75,7 +75,7 @@ public class Stage {
 
     @Override
     public String toString() {
-        return "Stage{" + "id=" + id + ", entreprise=" + entreprise + ", sujet=" + sujet + ", date_debut=" + date_debut + ", date_fin=" + date_fin + '}';
+        return this.entreprise;
     }
     
     

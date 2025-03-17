@@ -62,7 +62,7 @@ public class Encadrant {
 
     @Override
     public String toString() {
-        return "Encadrant{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + '}';
+        return this.nom+" "+this.prenom;
     }
     
     

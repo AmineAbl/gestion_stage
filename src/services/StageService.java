@@ -114,5 +114,67 @@ public class StageService implements IDao<Stage> {
         return stages;
     }
     
+    public List<Stage> findByEntreprise(Stage s) {
+    List<Stage> stages = new ArrayList<>();
+    String req = "SELECT * FROM Stage WHERE entreprise = ?";
+    if (s == null || s.getEntreprise() == null || s.getEntreprise().isEmpty()) {
+        System.out.println("Entreprise invalide.");
+        return stages;
+    }
+    try (PreparedStatement ps = connexion.getCn().prepareStatement(req)) {
+        if (connexion.getCn() == null) {
+            System.out.println("La connexion à la base de données est invalide.");
+            return stages;
+        }
+        ps.setString(1, s.getEntreprise());
+        try (ResultSet rs = ps.executeQuery()) {
+            while (rs.next()) {
+                stages.add(new Stage(
+                        rs.getInt("id"), 
+                        rs.getString("entreprise"), 
+                        rs.getString("sujet"), 
+                        rs.getDate("date_debut"), 
+                        rs.getDate("date_fin")
+                ));
+            }
+        }
+    } catch (SQLException ex) {
+        System.out.println("Erreur SQL : " + ex.getMessage());
+    }
+
+    return stages;
+    }
+    
+   public List<Stage> findStageBySujet(Stage s) {
+    List<Stage> stages = new ArrayList<>();
+    if (s == null || s.getSujet() == null || s.getSujet().isEmpty()) {
+        System.out.println("Sujet invalide.");
+        return stages;
+    }
+    if (connexion.getCn() == null) {
+        System.out.println("La connexion à la base de données est invalide.");
+        return stages;
+    }
+    String req = "SELECT * FROM Stage WHERE sujet = ?";
+    try (PreparedStatement ps = connexion.getCn().prepareStatement(req)) {
+        ps.setString(1, s.getSujet());
+        try (ResultSet rs = ps.executeQuery()) {
+            while (rs.next()) {
+                stages.add(new Stage(
+                        rs.getInt("id"),
+                        rs.getString("entreprise"),
+                        rs.getString("sujet"),
+                        rs.getDate("date_debut"),
+                        rs.getDate("date_fin")
+                ));
+            }
+        }
+    } catch (SQLException ex) {
+        System.out.println("Erreur SQL : " + ex.getMessage());
+        ex.printStackTrace(); 
+    }
+    return stages;
+}
+
     
 }
