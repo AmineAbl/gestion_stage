@@ -80,6 +80,7 @@ public class StageForm extends javax.swing.JInternalFrame {
             }
         });
 
+        bnAdd.setBackground(new java.awt.Color(0, 102, 204));
         bnAdd.setText("Ajouter");
         bnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +88,7 @@ public class StageForm extends javax.swing.JInternalFrame {
             }
         });
 
+        bnDelete.setBackground(new java.awt.Color(255, 0, 0));
         bnDelete.setText("Supprimer");
         bnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +96,7 @@ public class StageForm extends javax.swing.JInternalFrame {
             }
         });
 
+        bnUpdate.setBackground(new java.awt.Color(102, 255, 51));
         bnUpdate.setText("Modifier");
         bnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -5,6 +5,9 @@
  */
 package gui;
 
+import javax.swing.JDesktopPane;
+import javax.swing.JInternalFrame;
+
 /**
  *
  * @author AMINE
@@ -26,6 +29,13 @@ public class MDIApplication extends javax.swing.JFrame {
         }
         return instance;
     }
+    
+    private void fermerFenetresExistantes(JDesktopPane desktop) {
+    for (JInternalFrame frame : desktop.getAllFrames()) {
+        frame.dispose(); 
+    }
+}
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -143,36 +153,42 @@ public class MDIApplication extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void encadrantMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_encadrantMenuItemActionPerformed
+        fermerFenetresExistantes(desktopPane);
         EncadrantForm enf = new EncadrantForm();
         desktopPane.add(enf);
         enf.setVisible(true);
     }//GEN-LAST:event_encadrantMenuItemActionPerformed
 
     private void etudiantMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_etudiantMenuItemActionPerformed
+        fermerFenetresExistantes(desktopPane);
         EtudiantForm ef = new EtudiantForm();
         desktopPane.add(ef);
         ef.setVisible(true);
     }//GEN-LAST:event_etudiantMenuItemActionPerformed
 
     private void stageMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stageMenuItemActionPerformed
+        fermerFenetresExistantes(desktopPane);
         StageForm sf = new StageForm();
         desktopPane.add(sf);
         sf.setVisible(true);
     }//GEN-LAST:event_stageMenuItemActionPerformed
 
     private void EtudiantByStageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EtudiantByStageActionPerformed
+        fermerFenetresExistantes(desktopPane);
         EtudiantByStage ebs = new EtudiantByStage();
         desktopPane.add(ebs);
         ebs.setVisible(true);
     }//GEN-LAST:event_EtudiantByStageActionPerformed
 
     private void affectationStageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_affectationStageActionPerformed
+        fermerFenetresExistantes(desktopPane);
         AffectationStage as = new AffectationStage();
         desktopPane.add(as);
         as.setVisible(true);
     }//GEN-LAST:event_affectationStageActionPerformed
 
     private void StageBySujetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StageBySujetActionPerformed
+       fermerFenetresExistantes(desktopPane);
        StageBySujet sbs = new StageBySujet();
        desktopPane.add(sbs);
        sbs.setVisible(true);

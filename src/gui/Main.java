@@ -13,7 +13,7 @@ import services.UserService;
  * @author AMINE
  */
 public class Main extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Main
      */
@@ -39,52 +39,69 @@ public class Main extends javax.swing.JFrame {
         txtPassword = new javax.swing.JPasswordField();
         bnConnexion = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        bnOublié = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Source Sans Pro SemiBold", 0, 18)); // NOI18N
         jLabel1.setText("Login");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 166, 109, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 109, -1));
 
+        jLabel2.setFont(new java.awt.Font("Source Sans Pro SemiBold", 0, 18)); // NOI18N
         jLabel2.setText("Mot de passe");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 260, -1, -1));
-        jPanel1.add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 228, -1));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 228, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, -1, -1));
+        jPanel1.add(txtLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 228, -1));
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 228, -1));
 
         bnConnexion.setBackground(new java.awt.Color(102, 153, 255));
+        bnConnexion.setFont(new java.awt.Font("Source Sans Pro SemiBold", 0, 18)); // NOI18N
         bnConnexion.setText("Connexion");
         bnConnexion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bnConnexionActionPerformed(evt);
             }
         });
-        jPanel1.add(bnConnexion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 130, -1));
+        jPanel1.add(bnConnexion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 130, -1));
 
         jLabel3.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel3.setFont(new java.awt.Font("Showcard Gothic", 1, 48)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Gestion Des Stages");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 75, 510, 73));
+        jLabel3.setText("Bienvenue");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 40, 510, 73));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ombre-blue-curve-light-blue-background-vector.jpg"))); // NOI18N
+        bnOublié.setBackground(new java.awt.Color(255, 255, 255));
+        bnOublié.setFont(new java.awt.Font("Source Sans Pro SemiBold", 0, 18)); // NOI18N
+        bnOublié.setText("Mot de passe oublié ?");
+        bnOublié.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        bnOublié.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bnOubliéActionPerformed(evt);
+            }
+        });
+        jPanel1.add(bnOublié, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, -1, 30));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/side.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 540));
-
-        jLabel5.setText("jLabel5");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 744, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel4)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -104,6 +121,26 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Login ou mot de passe incorrect");
         }
     }//GEN-LAST:event_bnConnexionActionPerformed
+
+    private void bnOubliéActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnOubliéActionPerformed
+        String login = txtLogin.getText().trim();
+        UserService userService = new UserService();
+        if (userService.checkUserExists(login)) {
+            String nouveauMotDePasse = JOptionPane.showInputDialog(this, "Entrez votre nouveau mot de passe");
+            if (nouveauMotDePasse != null && !nouveauMotDePasse.trim().isEmpty()) {
+                boolean result = userService.changerMotDePasse(login, nouveauMotDePasse);
+                if (result) {
+                    JOptionPane.showMessageDialog(this, "Mot de passe changé avec succès !");
+                } else {
+                    JOptionPane.showMessageDialog(this, "Échec du changement de mot de passe.");
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "Le mot de passe ne peut pas être vide.");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Utilisateur non trouvé.");
+        }
+    }//GEN-LAST:event_bnOubliéActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,11 +179,11 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bnConnexion;
+    private javax.swing.JButton bnOublié;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtLogin;
     private javax.swing.JPasswordField txtPassword;

@@ -72,6 +72,7 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
 
         jLabel3.setText("Email :");
 
+        bnAdd.setBackground(new java.awt.Color(0, 102, 204));
         bnAdd.setText("Ajouter");
         bnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +80,7 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
         jButton1.setText("Supprimer");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +88,7 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
             }
         });
 
+        bnUpdate.setBackground(new java.awt.Color(102, 255, 51));
         bnUpdate.setText("Modifier");
         bnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,7 +198,7 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
         String prenom = txtPrenom.getText().toString();
         String email = txtEmail.getText().toString();
         if(es.create(new Etudiant(nom, prenom, email))){
-            JOptionPane.showMessageDialog(this, "Bien enregistré");
+            JOptionPane.showMessageDialog(this,nom+" "+prenom+ " Bien été Ajouté");
             load();
         }else{
             JOptionPane.showMessageDialog(this, "L'ajout est echoué !");
@@ -227,7 +230,7 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Bien modifié");
             load();
         }else{
-            JOptionPane.showMessageDialog(this, "L'ajout est echoué !");
+            JOptionPane.showMessageDialog(this, "Modification est echoué !");
         }
         }
     }//GEN-LAST:event_bnUpdateActionPerformed
