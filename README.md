@@ -91,3 +91,5 @@ CREATE TABLE AffectationStage (
     FOREIGN KEY(etudiant_id) REFERENCES Etudiant(id),
     FOREIGN KEY(encadrant_id) REFERENCES Encadrant(id)
 );
+# Video de test :
+https://drive.google.com/file/d/1tXm4tx6j6GDqMCISbF-as4PBZvxmfPKj/view?usp=drive_link 
