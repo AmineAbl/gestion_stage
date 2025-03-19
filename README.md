@@ -92,4 +92,4 @@ CREATE TABLE AffectationStage (
 );
 ```
 ## Video de test :
-https://drive.google.com/file/d/1tXm4tx6j6GDqMCISbF-as4PBZvxmfPKj/view?usp=drive_link 
+https://drive.google.com/file/d/1zYIf1WseQrat5N1uJRtbQYYVxxNdCbG8/view?usp=drive_link
