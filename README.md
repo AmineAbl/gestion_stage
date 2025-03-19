@@ -53,8 +53,8 @@ Ce projet permet de gérer des stages pour les étudiants, incluant l'ajout de s
    - `prénom` (varchar) : Prénom de l'encadrant
    - `email` (varchar) : Email de l'encadrant
 ## Les diagrammes UML:
-### diagrame des cas d'utilisation :
-![image](https://github.com/user-attachments/assets/b8f3309b-1d9d-4fa0-978f-9f5bbc1b7a23)
+ ### diagrame des cas d'utilisation :
+ ![image](https://github.com/user-attachments/assets/3aef68e0-d15b-4f09-9f4a-4c65d86f3dc9)
 
 ## Codes SQL
 
