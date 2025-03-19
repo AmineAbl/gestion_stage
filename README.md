@@ -52,6 +52,9 @@ Ce projet permet de gérer des stages pour les étudiants, incluant l'ajout de s
    - `nom` (varchar) : Nom de l'encadrant
    - `prénom` (varchar) : Prénom de l'encadrant
    - `email` (varchar) : Email de l'encadrant
+## Les diagrammes UML:
+### diagrame des cas d'utilisation :
+![image](https://github.com/user-attachments/assets/b8f3309b-1d9d-4fa0-978f-9f5bbc1b7a23)
 
 ## Codes SQL
 
@@ -102,6 +105,7 @@ Langage : Java
     ,Logiciel des diagrammes : MagicDraw
     ,Outil de gestion de base de données : phpMyAdmin
 ,Accès aux données : JDBC
+
 
 ## Video de test :
 https://drive.google.com/file/d/1zYIf1WseQrat5N1uJRtbQYYVxxNdCbG8/view?usp=drive_link
