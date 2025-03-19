@@ -7,13 +7,17 @@ package gui;
 
 import javax.swing.JOptionPane;
 import services.UserService;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.swing.*;
+import java.util.Properties;
 
 /**
  *
  * @author AMINE
  */
 public class Main extends javax.swing.JFrame {
-    
+
     /**
      * Creates new form Main
      */
@@ -125,20 +129,64 @@ public class Main extends javax.swing.JFrame {
     private void bnOubliéActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnOubliéActionPerformed
         String login = txtLogin.getText().trim();
         UserService userService = new UserService();
-        if (userService.checkUserExists(login)) {
-            String nouveauMotDePasse = JOptionPane.showInputDialog(this, "Entrez votre nouveau mot de passe");
-            if (nouveauMotDePasse != null && !nouveauMotDePasse.trim().isEmpty()) {
-                boolean result = userService.changerMotDePasse(login, nouveauMotDePasse);
-                if (result) {
-                    JOptionPane.showMessageDialog(this, "Mot de passe changé avec succès !");
+
+        String email = JOptionPane.showInputDialog(this, "Entrez votre adresse email");
+
+        if (userService.checkUserExists(login) && email != null && !email.isEmpty()) {
+
+            String reponseSecrete = JOptionPane.showInputDialog(this, "Quelle est votre couleur préférée ?");
+            String bonneReponse = "bleu";
+
+            if (reponseSecrete != null && reponseSecrete.trim().equalsIgnoreCase(bonneReponse)) {
+
+                String nouveauMotDePasse = JOptionPane.showInputDialog(this, "Entrez votre nouveau mot de passe");
+
+                if (nouveauMotDePasse != null && !nouveauMotDePasse.trim().isEmpty()) {
+                    boolean result = userService.changerMotDePasse(login, nouveauMotDePasse);
+
+                    Properties properties = new Properties();
+                    properties.put("mail.smtp.host", "smtp.gmail.com");
+                    properties.put("mail.smtp.port", "587");
+                    properties.put("mail.smtp.starttls.enable", "true");
+                    properties.put("mail.smtp.auth", "true");
+
+                    Session session = Session.getInstance(properties, new Authenticator() {
+                        @Override
+                        protected PasswordAuthentication getPasswordAuthentication() {
+                            return new PasswordAuthentication("amine.aboulaiche20@gmail.com", "wtgk bbcl yqax vgwl");
+                        }
+                    });
+
+                    try {
+
+                        Message message = new MimeMessage(session);
+                        message.setFrom(new InternetAddress("amine.aboulaiche20@gmail.com"));
+                        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
+                        message.setSubject("Récupération de mot de passe");
+                        String messageContent = "Bonjour,\n\nVotre nouveau mot de passe est : " + nouveauMotDePasse + "\n\nCordialement,";
+                        message.setText(messageContent);
+
+                        Transport.send(message);
+
+                        if (result) {
+                            JOptionPane.showMessageDialog(this, "Mot de passe changé avec succès !");
+                            JOptionPane.showMessageDialog(this, "Votre nouveau mot de passe a été envoyé à votre adresse email.");
+                        } else {
+                            JOptionPane.showMessageDialog(this, "Échec du changement de mot de passe.");
+                        }
+
+                    } catch (MessagingException e) {
+                        e.printStackTrace();
+                        JOptionPane.showMessageDialog(this, "Échec de l'envoi du mot de passe. Vérifiez l'adresse email.");
+                    }
                 } else {
-                    JOptionPane.showMessageDialog(this, "Échec du changement de mot de passe.");
+                    JOptionPane.showMessageDialog(this, "Le mot de passe ne peut pas être vide.");
                 }
             } else {
-                JOptionPane.showMessageDialog(this, "Le mot de passe ne peut pas être vide.");
+                JOptionPane.showMessageDialog(this, "Réponse incorrecte à la question secrète.");
             }
         } else {
-            JOptionPane.showMessageDialog(this, "Utilisateur non trouvé.");
+            JOptionPane.showMessageDialog(this, "L'adresse email ne peut pas être vide ou l'utilisateur est inconnu.");
         }
     }//GEN-LAST:event_bnOubliéActionPerformed
 

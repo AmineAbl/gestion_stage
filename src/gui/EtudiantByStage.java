@@ -35,13 +35,15 @@ public class EtudiantByStage extends javax.swing.JInternalFrame {
     }
 
     void loadEntreprise() {
+        listeEntreprise.removeAllItems();
         listeEntreprise.addItem("Choisir une option :");
         for (Stage s : sv.findAll()) {
             listeEntreprise.addItem(s);
+            
         }
     }
     
-   
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

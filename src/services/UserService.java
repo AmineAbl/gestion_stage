@@ -98,5 +98,19 @@ public class UserService implements IUserDao {
         }
         return false;
     }
+    
+    public boolean updatePassword(String newPassword) {
+    // Exemple fictif - adapte selon ta base de données
+    try {
+        // Requête SQL fictive
+        String query = "UPDATE users SET password = ? WHERE username = 'user1'";
+        System.out.println("Mot de passe mis à jour : " + newPassword);
+        return true;
+    } catch (Exception e) {
+        e.printStackTrace();
+        return false;
+    }
+}
+
 
 }
