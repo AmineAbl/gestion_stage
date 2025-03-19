@@ -98,8 +98,8 @@ Langage : Java
 ,Base de données : MySQL
 ,Bibliothèque graphique : JFreeChart
 ,Outils de développement :
-    IDE Java : NetBeans
-    ,Outil de diagramme : MagicDraw
+    IDE : NetBeans
+    ,Logiciel des diagrammes : MagicDraw
     ,Outil de gestion de base de données : phpMyAdmin
 ,Accès aux données : JDBC
 
