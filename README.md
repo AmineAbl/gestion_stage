@@ -92,16 +92,16 @@ CREATE TABLE AffectationStage (
 );
 ```
 ## Technologies :
--Langage : Java
--Framework d'interface graphique : Java Swing
--Api : JavaMail
--Base de données : MySQL
--Bibliothèque graphique : JFreeChart
--Outils de développement :
+Langage : Java
+,Framework d'interface graphique : Java Swing
+,Api : JavaMail
+,Base de données : MySQL
+,Bibliothèque graphique : JFreeChart
+,Outils de développement :
     IDE Java : NetBeans
-    Outil de diagramme : MagicDraw
-    Outil de gestion de base de données : phpMyAdmin
--Accès aux données : JDBC
+    ,Outil de diagramme : MagicDraw
+    ,Outil de gestion de base de données : phpMyAdmin
+,Accès aux données : JDBC
 
 ## Video de test :
 https://drive.google.com/file/d/1zYIf1WseQrat5N1uJRtbQYYVxxNdCbG8/view?usp=drive_link
