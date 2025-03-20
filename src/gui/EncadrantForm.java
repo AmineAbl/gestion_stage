@@ -23,6 +23,7 @@ public class EncadrantForm extends javax.swing.JInternalFrame {
      */
     public EncadrantForm() {
         initComponents();
+        this.setTitle("Formulaire des encadrants");
         ens = new EncadrantService();
         model = (DefaultTableModel) listeEncadrants.getModel();
         load();

@@ -24,6 +24,7 @@ public class StageForm extends javax.swing.JInternalFrame {
      */
     public StageForm() {
         initComponents();
+        this.setTitle("Formulaire des stages");
         sv = new StageService();
         model = (DefaultTableModel) listeStage.getModel();
         load();

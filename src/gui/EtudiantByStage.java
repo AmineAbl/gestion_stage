@@ -27,6 +27,7 @@ public class EtudiantByStage extends javax.swing.JInternalFrame {
      */
     public EtudiantByStage() {
         initComponents();
+        this.setTitle("Filtrage des stages par entreprise");
         sv = new StageService();
         model = (DefaultTableModel) listeSujet.getModel();
         loadEntreprise();

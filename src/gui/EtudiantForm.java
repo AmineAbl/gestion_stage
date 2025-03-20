@@ -23,6 +23,7 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
      */
     public EtudiantForm() {
         initComponents();
+        this.setTitle("Formulaire des etudiants");
         es = new EtudiantService();
         model = (DefaultTableModel) listeEtudiants.getModel();
         load();

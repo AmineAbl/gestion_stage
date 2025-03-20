@@ -22,6 +22,7 @@ public class StageBySujet extends javax.swing.JInternalFrame {
      */
     public StageBySujet() {
         initComponents();
+        this.setTitle("Rechercher un stage par sujet");
         sv = new StageService();
         model = (DefaultTableModel) listeStage.getModel();
         loadSujet();
