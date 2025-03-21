@@ -57,7 +57,6 @@ public class MDIApplication extends javax.swing.JFrame {
         StageBySujet = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
         contentMenuItem = new javax.swing.JMenuItem();
-        aboutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,15 +123,16 @@ public class MDIApplication extends javax.swing.JFrame {
         menuBar.add(editMenu);
 
         helpMenu.setMnemonic('h');
-        helpMenu.setText("Help");
+        helpMenu.setText("Statistiques");
 
         contentMenuItem.setMnemonic('c');
-        contentMenuItem.setText("Contents");
+        contentMenuItem.setText("Répartition des stages par entreprise");
+        contentMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contentMenuItemActionPerformed(evt);
+            }
+        });
         helpMenu.add(contentMenuItem);
-
-        aboutMenuItem.setMnemonic('a');
-        aboutMenuItem.setText("About");
-        helpMenu.add(aboutMenuItem);
 
         menuBar.add(helpMenu);
 
@@ -194,6 +194,13 @@ public class MDIApplication extends javax.swing.JFrame {
        sbs.setVisible(true);
     }//GEN-LAST:event_StageBySujetActionPerformed
 
+    private void contentMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contentMenuItemActionPerformed
+        fermerFenetresExistantes(desktopPane);
+        Barchart bs = new Barchart();
+        desktopPane.add(bs);
+        bs.setVisible(true);
+    }//GEN-LAST:event_contentMenuItemActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -232,7 +239,6 @@ public class MDIApplication extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem EtudiantByStage;
     private javax.swing.JMenuItem StageBySujet;
-    private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem affectationStage;
     private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JDesktopPane desktopPane;
