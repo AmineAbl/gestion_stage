@@ -112,5 +112,8 @@ CREATE TABLE AffectationStage (
 
 
 ## Video de test :
-https://drive.google.com/file/d/1zYIf1WseQrat5N1uJRtbQYYVxxNdCbG8/view?usp=drive_link
+
+https://github.com/user-attachments/assets/852fcca2-afa4-410d-90e4-5b0e4ee352a7
+
+
 
