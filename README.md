@@ -56,7 +56,7 @@ Ce projet permet de gérer des stages pour les étudiants, incluant l'ajout de s
  ### diagrame des cas d'utilisation :
  ![image](https://github.com/user-attachments/assets/3aef68e0-d15b-4f09-9f4a-4c65d86f3dc9)
  ### diagramme de classe :
- ![image](https://github.com/user-attachments/assets/9f2e5753-beab-405a-a3cb-049035ccf3eb)
+ ![image](https://github.com/user-attachments/assets/c4186cd8-7c6d-46b6-a563-bd2adbebdc5c)
 
 ## Codes SQL
 
