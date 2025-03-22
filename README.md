@@ -107,6 +107,8 @@ CREATE TABLE AffectationStage (
   - Logiciel des diagrammes : MagicDraw
   - Outil de gestion de base de données : phpMyAdmin
 - **Accès aux données** : JDBC
+## Architecture du projet :
+<img width="755" alt="ArchitectureFinal" src="https://github.com/user-attachments/assets/910e43e0-4322-41ba-9c5b-545aa980f90b" />
 
 
 ## Video de test :
