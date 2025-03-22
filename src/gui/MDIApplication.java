@@ -5,6 +5,9 @@
  */
 package gui;
 
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
 
@@ -21,7 +24,22 @@ public class MDIApplication extends javax.swing.JFrame {
         initComponents();
         this.setTitle("Gestion des stages");
         this.setExtendedState(MAXIMIZED_BOTH);
+        //
+         // Crée le DesktopPane pour gérer les sous-fenêtres
+        desktopPane = new JDesktopPane();
+        setContentPane(desktopPane);
+
+        // Ajoute le graphique (Barchart) en tant que JInternalFrame
+        openBarChartInternalFrame();
+       
     }
+    private void openBarChartInternalFrame() {
+        // Crée et affiche le graphique dans un JInternalFrame
+        Barchart barchartFrame = new Barchart();  // Assurez-vous que Barchart est un JInternalFrame
+        barchartFrame.setVisible(true);           // Affiche le graphique
+    }
+    
+    
     
     public static MDIApplication getInstance() {
         if (instance == null) {
@@ -56,7 +74,6 @@ public class MDIApplication extends javax.swing.JFrame {
         affectationStage = new javax.swing.JMenuItem();
         StageBySujet = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
-        contentMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,16 +141,11 @@ public class MDIApplication extends javax.swing.JFrame {
 
         helpMenu.setMnemonic('h');
         helpMenu.setText("Statistiques");
-
-        contentMenuItem.setMnemonic('c');
-        contentMenuItem.setText("Répartition des stages par entreprise");
-        contentMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contentMenuItemActionPerformed(evt);
+        helpMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                helpMenuMouseClicked(evt);
             }
         });
-        helpMenu.add(contentMenuItem);
-
         menuBar.add(helpMenu);
 
         setJMenuBar(menuBar);
@@ -142,11 +154,11 @@ public class MDIApplication extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 790, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
         );
 
         pack();
@@ -194,12 +206,12 @@ public class MDIApplication extends javax.swing.JFrame {
        sbs.setVisible(true);
     }//GEN-LAST:event_StageBySujetActionPerformed
 
-    private void contentMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contentMenuItemActionPerformed
+    private void helpMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMenuMouseClicked
         fermerFenetresExistantes(desktopPane);
         Barchart bs = new Barchart();
         desktopPane.add(bs);
         bs.setVisible(true);
-    }//GEN-LAST:event_contentMenuItemActionPerformed
+    }//GEN-LAST:event_helpMenuMouseClicked
 
     /**
      * @param args the command line arguments
@@ -240,7 +252,6 @@ public class MDIApplication extends javax.swing.JFrame {
     private javax.swing.JMenuItem EtudiantByStage;
     private javax.swing.JMenuItem StageBySujet;
     private javax.swing.JMenuItem affectationStage;
-    private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem encadrantMenuItem;

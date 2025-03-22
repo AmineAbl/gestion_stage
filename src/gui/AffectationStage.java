@@ -128,6 +128,7 @@ public class AffectationStage extends javax.swing.JInternalFrame {
         });
 
         bnAffect.setBackground(new java.awt.Color(0, 102, 204));
+        bnAffect.setIcon(new javax.swing.ImageIcon("E:\\Etude\\S6\\Programmation 3\\projetJava\\Crystal Clear\\22x22\\actions\\edit_add.png")); // NOI18N
         bnAffect.setText("Affecter");
         bnAffect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,6 +137,7 @@ public class AffectationStage extends javax.swing.JInternalFrame {
         });
 
         bnDelete.setBackground(new java.awt.Color(255, 0, 0));
+        bnDelete.setIcon(new javax.swing.ImageIcon("E:\\Etude\\S6\\Programmation 3\\projetJava\\Crystal Clear\\22x22\\actions\\sl_delentry.png")); // NOI18N
         bnDelete.setText("Supprimer");
         bnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +146,7 @@ public class AffectationStage extends javax.swing.JInternalFrame {
         });
 
         bnUpdate.setBackground(new java.awt.Color(102, 255, 51));
+        bnUpdate.setIcon(new javax.swing.ImageIcon("E:\\Etude\\S6\\Programmation 3\\projetJava\\Crystal Clear\\22x22\\actions\\editcopy.png")); // NOI18N
         bnUpdate.setText("Modifier");
         bnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +167,7 @@ public class AffectationStage extends javax.swing.JInternalFrame {
                         .addComponent(bnDelete)
                         .addGap(171, 171, 171)
                         .addComponent(bnUpdate)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtStage, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -176,8 +179,8 @@ public class AffectationStage extends javax.swing.JInternalFrame {
                         .addGap(150, 150, 150)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtEncadrant)
-                            .addComponent(listeEncadrant, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(75, 75, 75))))
+                            .addComponent(listeEncadrant, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(75, 75, 75))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,7 +232,7 @@ public class AffectationStage extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

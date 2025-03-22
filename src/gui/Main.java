@@ -44,6 +44,7 @@ public class Main extends javax.swing.JFrame {
         bnConnexion = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         bnOublié = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,7 +87,8 @@ public class Main extends javax.swing.JFrame {
                 bnOubliéActionPerformed(evt);
             }
         });
-        jPanel1.add(bnOublié, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, -1, 30));
+        jPanel1.add(bnOublié, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 190, 30));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/side.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
@@ -232,6 +234,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtLogin;
     private javax.swing.JPasswordField txtPassword;
