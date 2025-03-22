@@ -96,17 +96,17 @@ CREATE TABLE AffectationStage (
     FOREIGN KEY(encadrant_id) REFERENCES Encadrant(id)
 );
 ```
-## Technologies :
--`Langage` : Java
--`Framework d'interface graphique` : Java Swing
--`Api` : JavaMail
--`Base de données` : MySQL
--`Bibliothèque graphique` : JFreeChart
--`Outils de développement` :
-    -IDE : NetBeans
-    -Logiciel des diagrammes : MagicDraw
-    -Outil de gestion de base de données : phpMyAdmin
--`Accès aux données` : JDBC
+## Technologies utilisées
+- **Langage** : Java
+- **Framework d'interface graphique** : Java Swing
+- **API** : JavaMail
+- **Base de données** : MySQL
+- **Bibliothèque graphique** : JFreeChart
+- **Outils de développement** :
+  - IDE : NetBeans
+  - Logiciel des diagrammes : MagicDraw
+  - Outil de gestion de base de données : phpMyAdmin
+- **Accès aux données** : JDBC
 
 
 ## Video de test :
