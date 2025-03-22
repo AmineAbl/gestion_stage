@@ -53,10 +53,10 @@ Ce projet permet de gérer des stages pour les étudiants, incluant l'ajout de s
    - `prénom` (varchar) : Prénom de l'encadrant
    - `email` (varchar) : Email de l'encadrant
 ## Les diagrammes UML:
- ### diagrame des cas d'utilisation :
+ ### diagramme des cas d'utilisation :
  ![image](https://github.com/user-attachments/assets/3aef68e0-d15b-4f09-9f4a-4c65d86f3dc9)
  ### diagramme de classe :
- ![image](https://github.com/user-attachments/assets/9f2e5753-beab-405a-a3cb-049035ccf3eb)
+ ![image](https://github.com/user-attachments/assets/c4186cd8-7c6d-46b6-a563-bd2adbebdc5c)
 
 ## Codes SQL
 
@@ -96,19 +96,24 @@ CREATE TABLE AffectationStage (
     FOREIGN KEY(encadrant_id) REFERENCES Encadrant(id)
 );
 ```
-## Technologies :
-Langage : Java
-,Framework d'interface graphique : Java Swing
-,Api : JavaMail
-,Base de données : MySQL
-,Bibliothèque graphique : JFreeChart
-,Outils de développement :
-    IDE : NetBeans
-    ,Logiciel des diagrammes : MagicDraw
-    ,Outil de gestion de base de données : phpMyAdmin
-,Accès aux données : JDBC
+## Technologies utilisées
+- **Langage** : Java
+- **Framework d'interface graphique** : Java Swing
+- **API** : JavaMail
+- **Base de données** : MySQL
+- **Bibliothèque graphique** : JFreeChart
+- **Outils de développement** :
+  - IDE : NetBeans
+  - Logiciel des diagrammes : MagicDraw
+  - Outil de gestion de base de données : phpMyAdmin
+- **Accès aux données** : JDBC
+## Architecture du projet :
+<img width="755" alt="ArchitectureFinal" src="https://github.com/user-attachments/assets/910e43e0-4322-41ba-9c5b-545aa980f90b" />
 
 
 ## Video de test :
-https://drive.google.com/file/d/1zYIf1WseQrat5N1uJRtbQYYVxxNdCbG8/view?usp=drive_link
+
+https://github.com/user-attachments/assets/852fcca2-afa4-410d-90e4-5b0e4ee352a7
+
+
 
