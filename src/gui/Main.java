@@ -25,6 +25,11 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         this.setTitle("Authentification");
         this.setLocationRelativeTo(null);
+        // Changer l'icône de la fenêtre
+        ImageIcon icon = new ImageIcon(getClass().getResource("/images/netscape.png"));
+        setIconImage(icon.getImage());
+        setVisible(true);
+        
     }
 
     /**
