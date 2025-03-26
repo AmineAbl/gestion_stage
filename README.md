@@ -117,7 +117,9 @@ https://github.com/user-attachments/assets/852fcca2-afa4-410d-90e4-5b0e4ee352a7
 
 ## Video d'installation .exe :
 
-https://github.com/user-attachments/assets/80f11e5b-f9e0-4a87-a954-203451c27c08
+https://github.com/user-attachments/assets/b3c6780a-9185-4a34-8594-51dc1baa5269
+
+
 
 
 
