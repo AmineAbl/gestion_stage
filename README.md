@@ -115,5 +115,15 @@ CREATE TABLE AffectationStage (
 
 https://github.com/user-attachments/assets/852fcca2-afa4-410d-90e4-5b0e4ee352a7
 
+## Video d'installation .exe :
+
+https://github.com/user-attachments/assets/36048f61-b15b-4b5d-b5ed-8fd21d257203
+
+
+
+
+
+
+
 
 
